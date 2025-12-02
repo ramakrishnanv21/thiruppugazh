@@ -1,0 +1,34 @@
+<ion-header [translucent]="true" mode="md">
+  <ion-toolbar color="tertiary" mode="md">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/songs"></ion-back-button>
+    </ion-buttons>
+    <ion-title>பாடல் விவரம்</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="song-detail-container" *ngIf="song">
+    <!-- Full Lyrics Section -->
+    <ion-card class="section-card lyrics-card ion-no-padding ion-no-margin" mode="md">
+      <ion-card-header>
+        <ion-card-title>
+          <ion-icon name="musical-notes-outline"></ion-icon>
+          முழு பாடல்
+        </ion-card-title>
+      </ion-card-header>
+      <ion-card-content class="ion-no-padding">
+        <div class="lyrics-text">{{ song.fullLyrics }}</div>
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+  <!-- Loading/Error State -->
+  <div class="empty-state" *ngIf="!song">
+    <ion-card>
+      <ion-card-content>
+        <p>பாடல் கிடைக்கவில்லை</p>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

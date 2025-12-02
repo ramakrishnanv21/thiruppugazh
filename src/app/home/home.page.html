@@ -1,0 +1,20 @@
+<ion-header [translucent]="true" mode="md">
+  <ion-toolbar color="tertiary" mode="md">
+    <ion-title class="ion-text-center ion-padding-top-small" mode="md">
+      Thiruppugazh
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" [scrollY]="false">
+  <div class="background-container" (click)="navigateToSongs()">
+    <img src="assets/images/thiruppugazh-1.jpg" alt="Thiruppugazh" class="background-image" />
+    <div class="title-overlay" mode="md">
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>Click to view songs</ion-card-title>
+        </ion-card-header>
+      </ion-card>
+    </div>
+  </div>
+</ion-content>

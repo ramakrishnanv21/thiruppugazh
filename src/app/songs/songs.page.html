@@ -1,0 +1,24 @@
+<ion-header [translucent]="true" mode="md">
+  <ion-toolbar color="tertiary" mode="md">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>திருப்புகழ் பாடல்கள்</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="songs-container">
+    <div class="songs-list">
+      <ion-card *ngFor="let song of songs" class="song-card" (click)="openSongDetail(song.id)">
+        <ion-card-header>
+          <ion-card-subtitle>{{ song.subtitle }}</ion-card-subtitle>
+          <ion-card-title>{{ song.title }}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <p class="description">{{ song.description }}</p>
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </div>
+</ion-content>

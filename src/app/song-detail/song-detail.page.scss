@@ -1,0 +1,184 @@
+.song-detail-container {
+  padding: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  animation: fadeIn 0.5s ease-out;
+}
+
+.song-header {
+  text-align: center;
+  margin-bottom: 30px;
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(102, 126, 234, 0.3);
+
+  .song-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: white;
+    margin: 0 0 12px 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  .song-subtitle {
+    font-size: 1.125rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin: 0;
+    font-weight: 500;
+  }
+}
+
+.section-card {
+  margin-bottom: 24px;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  }
+
+  ion-card-header {
+    padding: 20px;
+  }
+
+  ion-card-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 1.5rem;
+    font-weight: 700;
+
+    ion-icon {
+      font-size: 1.75rem;
+    }
+  }
+
+  ion-card-content {
+    padding: 20px;
+    font-size: 1.125rem;
+    line-height: 1.8;
+  }
+}
+
+// Lyrics Card
+.lyrics-card {
+  ion-card-header {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    color: white;
+  }
+
+  .lyrics-text {
+    white-space: pre-line;
+    font-family: "Georgia", serif;
+    font-size: 1.25rem;
+    color: #333;
+  }
+}
+
+// Explanation Card
+.explanation-card {
+  ion-card-header {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    color: white;
+  }
+
+  .explanation-text {
+    color: #444;
+    margin: 0;
+  }
+}
+
+// Meaning Card
+.meaning-card {
+  ion-card-header {
+    background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+    color: white;
+  }
+
+  .meaning-text {
+    color: #444;
+    margin: 0;
+    font-weight: 500;
+  }
+}
+
+// Empty State
+.empty-state {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+  padding: 20px;
+
+  ion-card {
+    text-align: center;
+    max-width: 400px;
+
+    p {
+      font-size: 1.25rem;
+      color: #666;
+      margin: 0;
+    }
+  }
+}
+
+// Animations
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// Responsive Design
+@media (max-width: 768px) {
+  .song-header {
+    .song-title {
+      font-size: 2rem;
+    }
+
+    .song-subtitle {
+      font-size: 1rem;
+    }
+  }
+
+  .section-card {
+    ion-card-title {
+      font-size: 1.25rem;
+    }
+
+    ion-card-content {
+      font-size: 1rem;
+    }
+  }
+
+  .lyrics-card .lyrics-text {
+    font-size: 1.125rem;
+  }
+}
+
+// Dark Mode Support
+@media (prefers-color-scheme: dark) {
+  .lyrics-card .lyrics-text {
+    background: #2d2d2d;
+    color: #e0e0e0;
+    border-left-color: #f5576c;
+  }
+
+  .explanation-text,
+  .meaning-text {
+    color: #ccc;
+  }
+
+  .empty-state ion-card p {
+    color: #999;
+  }
+}
