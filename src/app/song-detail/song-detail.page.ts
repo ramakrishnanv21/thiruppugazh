@@ -13,8 +13,7 @@ import {
   IonCardHeader,
   IonCardTitle,
   IonCardContent,
-  IonIcon,
-  IonNote
+  IonIcon
 } from '@ionic/angular/standalone';
 import { SongService, Song } from '../services/song.service';
 import { addIcons } from 'ionicons';
@@ -38,8 +37,7 @@ import { musicalNotesOutline, bookOutline, bulbOutline } from 'ionicons/icons';
     IonCardContent,
     IonIcon,
     CommonModule,
-    FormsModule,
-    IonNote
+    FormsModule
   ]
 })
 export class SongDetailPage implements OnInit {
